@@ -1,0 +1,48 @@
+{
+  "name": "backend-core-service",
+  "version": "1.0.0",
+  "description": "Pinnacle Backend Core Service",
+  "main": "index.js",
+  "scripts": {
+    "build": "concurrently \"rimraf dist\" \"npx tsc\"",
+    "prestart": "npm run build",
+    "start": "node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "npm run build",
+    "dev": "concurrently  \"npx tsc -w\" \"nodemon dist/app.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pinnacle-xchange/backend-core-service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pinnacle-xchange/backend-core-service/issues"
+  },
+  "homepage": "https://github.com/Pinnacle-xchange/backend-core-service#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.1",
+    "lite-server": "^2.6.1",
+    "mongoose": "^7.4.0",
+    "rimraf": "^5.0.1",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/body-parser": "^1.19.2",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/express": "*",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "*",
+    "@types/validator": "^13.11.1",
+    "nodemon": "^3.0.1"
+  }
+}
